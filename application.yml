@@ -6,6 +6,11 @@ server:
 # 0으로 셋팅하면 spring이 임의 port를 할당
   port: 0
 spring :
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ordermsa?useSSL=false&allowPublicKeyRetrieval=true
@@ -23,3 +28,6 @@ spring :
     redis:
       port: 6379
       host: localhost
+  cloud:
+    bus:
+      enabled: true
