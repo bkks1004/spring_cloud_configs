@@ -35,4 +35,5 @@ spring:
       host: localhost
   cloud:
     bus:
+      id: ${spring.application.name}:${server.port}:${random.value}
       enabled: true
